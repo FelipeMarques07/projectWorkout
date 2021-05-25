@@ -53,8 +53,8 @@ const tableBuilder = (data,fields) => {
 
     fields.forEach(field =>{
         const column = document.createElement('td')
-        const textColumn =  document.createTextNode(data[field.name])
-        column.appendChild(textColumn)
+        const columnText =  document.createTextNode(data[field.name])
+        column.appendChild(columnText)
         itemList.appendChild(column) 
     })
     

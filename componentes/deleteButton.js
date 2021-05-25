@@ -1,12 +1,12 @@
-const deleteWorkout = () => { 
+const getDeleteButton = () => { 
     const deleteButton = document.createElement('button');
     deleteButton.innerText = 'deletar';
-    deleteButton.addEventListener('click', removeItemList);
+    deleteButton.addEventListener('click', deleteWorkout);
 
     return deleteButton;
 }
 
-const removeItemList = (event) => { 
+const deleteWorkout = (event) => { 
     const deleteButton = event.target;
     
     const itemList = deleteButton.parentElement;
@@ -17,4 +17,4 @@ const removeItemList = (event) => {
 
 }
 
-export default deleteWorkout
+export default getDeleteButton
