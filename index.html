@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
   <title>Exercícios Físicos</title>
 </head>
 <body>
@@ -11,20 +12,23 @@
       Exercícios Físicos
     </h1>
     <div class="input">
-      <form class="form">
-        <input type="text" id="workoutName">
-        <input type="time" id="workoutTime">
+      <form class="form-input">
+        <label class="label-name" for="workoutName">Exercício:</label>
+        <input type="text" id="workoutName" placeholder="Natação">
+        <label class="label-time" for="workoutTime">Duração em horas:</label>
+        <input type="text" id="workoutTime" placeholder="1">
+        <label class="label-date" for="workoutDate">Data:</label>
         <input type="date" id="workoutDate">
-        <button id="dataFormButton">Adicionar </button>
+        <button id="dataFormButton"></button>
       </form>
     </div>
-    <div>
-      <table>
+    <div class="div-table">
+      <table class="workoutTable">
         <thead class="table-tittle">
           <tr>
             <th>Data</th>
             <th>Exercicio</th>
-            <th>Duração</th>
+            <th>Duração (horas)</th>
             <th></th>
           </tr>
         </thead>

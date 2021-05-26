@@ -1,6 +1,6 @@
 const getDeleteButton = () => { 
     const deleteButton = document.createElement('button');
-    deleteButton.innerText = 'deletar';
+    deleteButton.classList.add('delete-button')
     deleteButton.addEventListener('click', deleteWorkout);
 
     return deleteButton;

@@ -1,0 +1,112 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #000000;
+  text-align: center;
+}
+
+.input {
+  width: 600px;
+  padding: 2.00rem;
+  border: solid;
+  margin-bottom: 30px;
+}
+
+#dataFormButton{
+  margin-top: 20px;
+  float:right;
+  background: url('img/add.png')  no-repeat;
+  width: 45px;
+  height: 45px;
+  border: none;
+}
+
+#dataFormButton:hover{
+  position: relative;
+  top: 1px;
+  left: 1px;
+  border-color: #000 #999 #999 #000;
+}
+input{
+  margin: 12px;
+}
+
+#workoutName{
+  width: 150px;
+  height: 20px;
+  font-size: 16px;
+}
+
+#workoutTime{
+  width: 30px;
+  height: 20px;
+  font-size: 16px;
+  margin-right: 50px;
+}
+
+.label-time{
+  margin-left: 70px;
+}
+
+#workoutDate{
+  width: 150px;
+  height: 20px;
+  font-size: 16px;
+}
+
+label{
+  font-size: 18px;
+  font-weight: bold;
+  display: inline;
+}
+
+.div-table{
+  width: 664px;
+  border: solid;
+}
+
+.workoutTable{
+  width: 664px;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.table-tittle{
+  background-color:#cce8c5;
+  width:100%;
+  font-size: 20px;
+  border-bottom: solid;
+}
+
+.workoutTable th{
+  width:30%;
+}
+
+.workoutTable td{
+  font-size: 18px;
+}
+
+.delete-button{
+background: url('img/deleteButton.png')  no-repeat;
+width: 45px;
+height: 45px;
+border: none;
+}
+
+#dataTbody tr:hover{
+  font-weight: bold;
+}
+
+.delete-button:hover{
+  position: relative;
+  top: 1px;
+  left: 1px;
+  border-color: #000 #999 #999 #000;
+}
+
+
