@@ -1,5 +1,6 @@
-import deleteButton from './componentes/deleteButton.js'
+import getDeleteButton from './componentes/deleteButton.js'
  
+let totalHours = 0;
 const createWorkout = (event) => {
 
     event.preventDefault();
@@ -57,8 +58,24 @@ const tableBuilder = (data,fields) => {
         column.appendChild(columnText)
         itemList.appendChild(column) 
     })
-    
-    itemList.appendChild(deleteButton());
+    updateTotalTime(data.time)
+    itemList.appendChild(getDeleteButton());
     return itemList;    
 }
 
+const builderCounter = (totalHours) => {
+    const totalTimeDiv = document.querySelector("#counter");
+    const contentTotalTime = `<p>${totalHours} horas de exercícios físicos </p>`;
+    totalTimeDiv.innerHTML = contentTotalTime;
+}
+
+const updateTotalTime =(time) => {
+    time = parseInt(time);
+    if(isNaN(time) || time == '' || time == null){
+        time = 0;  
+    }
+    totalHours = totalHours + time
+    builderCounter(totalHours);  
+}
+
+export default updateTotalTime;

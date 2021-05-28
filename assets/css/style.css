@@ -109,4 +109,7 @@ border: none;
   border-color: #000 #999 #999 #000;
 }
 
-
+#counter{
+  font-size: 20px;
+  text-align: center;
+}
