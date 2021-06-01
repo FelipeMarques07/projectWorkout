@@ -51,6 +51,7 @@ const getValues = (fields) => {
 const tableBuilder = (data,fields) => {
 
     const itemList = document.createElement('tr');
+    itemList.dataset['time'] = data.time
 
     fields.forEach(field =>{
         const column = document.createElement('td')
@@ -63,7 +64,7 @@ const tableBuilder = (data,fields) => {
     return itemList;    
 }
 
-const builderCounter = (totalHours) => {
+const buildCounter = (totalHours) => {
     const totalTimeDiv = document.querySelector("#counter");
     const contentTotalTime = `<p>${totalHours} horas de exercícios físicos </p>`;
     totalTimeDiv.innerHTML = contentTotalTime;
@@ -71,11 +72,11 @@ const builderCounter = (totalHours) => {
 
 const updateTotalTime =(time) => {
     time = parseInt(time);
-    if(isNaN(time) || time == '' || time == null){
+    if(isNaN(time) || !time){
         time = 0;  
     }
     totalHours = totalHours + time
-    builderCounter(totalHours);  
+    buildCounter(totalHours);  
 }
 
 export default updateTotalTime;

@@ -11,14 +11,12 @@ const getDeleteButton = () => {
 
 const deleteWorkout = (event) => { 
     const deleteButton = event.target;
-    
     const itemList = deleteButton.parentElement;
-    var removeHours = (parseFloat(itemList.children[2].innerHTML)) * -1;
+    var removeHours = (parseFloat(itemList.dataset.time)) * -1;
     updateTotalTime(removeHours);
     itemList.remove();
-
+    
     return deleteButton;
-
 }
 
 export default getDeleteButton
